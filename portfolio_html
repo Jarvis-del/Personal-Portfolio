@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="portfolio_style.css">
+<title>Personal Portfolio Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="portfolioLogo.jpeg" class="logo">
+
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!---<li><a href="#portfolio">My Work</a></li>--->
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Prince</span> Kumar Singh<br>from India</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ---------about--------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+
+            <div id="about-col-1">
+                <img src="orgUser.png">
+            </div>
+
+            <div id="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+
+                <p>
+                    I am a final-year student and aspiring developer passionate 
+                    about web development and problem solving. I work with Java,
+                    Python, SQL, and modern web technologies like HTML, CSS,
+                    and JavaScript, and I am currently exploring Agentic AI
+                    while continuously improving my development skills.
+                </p>
+
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event,'experience')">Projects</p>
+                    <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Developer</span><br>Web App Developer</li>
+                        <li><span>Agentic AI</span><br>Agentic AI Developer</li>
+                        <li><span>Python</span><br>Data Analysis</li>
+                        <li><span>Java</span><br>DSA</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>OOPS</span><br>Employee Payroll System</li>
+                        <li><span>SQL</span><br>Blinkit Sale Analysis</li>
+                        <li><span>Web Development</span><br>Personal Portfolio , Expense Tracker</li>
+                        <li><span>AI</span><br>Google Ranking Algorithm</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B tech</span><br>G.L. Bajaj Institute of Technology <br>2023-2027</li>
+                        <li><span>12th</span><br>Kamla Rai College, Gopalganj Bihar <br>2020-2022</li>
+                        <li><span>10th</span><br>D.A.V. Public School Thawe Gopalganj<br>2019</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------My works----------------->
+<div id="portfolio">
+    <div class = "container">
+        <h1 class="sub-title"> Portfolio</h1>
+        <div class="work-list">
+            <div>
+                <img src="org_leetcode.webp" class="leetcode-img">
+                <h2>LeetCode</h2>
+                <p>Coding Profile & Algorithm Proficiency</p>
+                <a href="https://leetcode.com/u/Ultron17/">Learn More</a>
+            </div>
+            <div>
+                <img src="orgGithub.png" >
+                <h2>GitHub</h2>
+                <p>Project Cards</p>
+                <a href="https://github.com/Jarvis-del">Learn More</a>
+            </div>
+            <div>
+                <img src="Org_Linkedin.jpeg" >
+                <h2>LinkedIn</h2>
+                <p>More About My Work</p>
+                <a href="https://linkedin.com/in/prince-kumar-singh">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------Contact----------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fas fa-envelope"></i><a href="mailto:hacker.ps2004@gmail.com">hacker.ps2004@gmail.com</a></p>
+                <p> <i class="fas fa-phone"></i>917903892826</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/prince_singh393/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/prince-kumar-singh" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/917903892826" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="" class="btn">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form class="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="1" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(event, tabname){
+
+    for (let tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    for (let tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbwSS6iJ_qysP84RK5fx7_97nP8PJJ9KlSQxpve8qH3ortLYk3vgr_Zl2wolst4QG1FQ/exec'
+	const form = document.forms['submit-to-google-sheet']
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
+</body>
+</html>
